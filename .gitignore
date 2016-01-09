@@ -1,0 +1,15 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+#intelliJ files
+.idea
+*.iml
+*.classpath
+*.project
+
+#configuration files
+application.properties
