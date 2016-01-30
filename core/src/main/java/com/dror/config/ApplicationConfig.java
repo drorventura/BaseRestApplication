@@ -15,6 +15,7 @@ import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.data.cassandra.repository.config.EnableCassandraRepositories;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
 import javax.ws.rs.core.Application;
 import javax.ws.rs.ext.RuntimeDelegate;
@@ -30,6 +31,7 @@ import java.util.List;
 @PropertySource(value = {"classpath:dev-application.properties"})
 @Import({DataConfig.class, SecurityConfig.class})
 @EnableCassandraRepositories(basePackages = "com.dror.repositories")
+@EnableWebSecurity
 public class ApplicationConfig
 {
     @Autowired
