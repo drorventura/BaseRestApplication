@@ -12,4 +12,4 @@
 *.project
 
 #configuration files
-application.properties
+*-application.properties

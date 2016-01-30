@@ -3,7 +3,7 @@ package com.dror.rest.services;
 import com.dror.exceptions.InternalServerErrorException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -16,12 +16,12 @@ import javax.ws.rs.core.Response;
  * Date: 1/8/2016
  */
 @Path("test")
-@Component
+@Controller
 @Produces({MediaType.APPLICATION_JSON})
 public class TestService
 {
     @Autowired
-    private Environment environment;
+    Environment environment;
 
     @Path("version")
     @GET

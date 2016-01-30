@@ -14,6 +14,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
+import org.springframework.data.cassandra.repository.config.EnableCassandraRepositories;
 
 import javax.ws.rs.core.Application;
 import javax.ws.rs.ext.RuntimeDelegate;
@@ -26,8 +27,9 @@ import java.util.List;
  * Date: 1/8/2016
  */
 @Configuration
-@PropertySource(value = {"classpath:application.properties"})
-@Import({SecurityConfig.class})
+@PropertySource(value = {"classpath:dev-application.properties"})
+@Import({DataConfig.class, SecurityConfig.class})
+@EnableCassandraRepositories(basePackages = "com.dror.repositories")
 public class ApplicationConfig
 {
     @Autowired

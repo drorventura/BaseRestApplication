@@ -15,7 +15,7 @@
     <properties>
         <spring.version>4.1.4.RELEASE</spring.version>
         <spring-security.version>3.2.5.RELEASE</spring-security.version>
-        <spring-data.jpa.version>1.7.1.RELEASE</spring-data.jpa.version>
+        <spring-cassandra.version>1.3.2.RELEASE</spring-cassandra.version>
         <cxf-rt-frontend-jaxrs.version>3.0.3</cxf-rt-frontend-jaxrs.version>
         <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
     </properties>
@@ -42,9 +42,16 @@
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
             <version>${spring.version}</version>
         </dependency>
+
+        <!--Security-->
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-core</artifactId>
@@ -59,6 +66,13 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-config</artifactId>
             <version>${spring-security.version}</version>
+        </dependency>
+
+        <!--Persistence-->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-cassandra</artifactId>
+            <version>${spring-cassandra.version}</version>
         </dependency>
 
         <!--Boundaries-->
